@@ -1,0 +1,167 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0250e529",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(array([2], dtype=int64),)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#index retrival\n",
+    "import numpy as np\n",
+    "arr=np.array([1,6,2,7,6,4])\n",
+    "x=np.where(arr==2)\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c40563cc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "arr=np.array([0,1,2,2,7,8,9])\n",
+    "x=np.searchsorted(arr,3,side='left')\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "f6e668e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "arr=np.array([0,1,2,2,7,8,9])\n",
+    "x=np.searchsorted(arr,8,side='right')\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "248bdc09",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[2 4 5 6 7 9]\n",
+      "[[4 7 9]\n",
+      " [1 4 9]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "arr=np.array([9,5,2,7,6,4])\n",
+    "print(np.sort(arr))\n",
+    "a=np.array([[7,4,9],[9,1,4]])\n",
+    "print(np.sort(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "0d3b0455",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[False, True, False, True]\n",
+      "[78 88]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Boolean indexing\n",
+    "arr=np.array([31,78,69,88])\n",
+    "x=[False,True,False,True]\n",
+    "newarr=arr[x]\n",
+    "print(x)\n",
+    "print(newarr)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "4a158685",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[ True False  True False]\n",
+      "[31 69]\n"
+     ]
+    }
+   ],
+   "source": [
+    "filter_arr=arr<70\n",
+    "newarr=arr[filter_arr]\n",
+    "print(filter_arr)\n",
+    "print(newarr)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "28c0fbbc",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
